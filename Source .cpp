@@ -85,12 +85,31 @@ for (int i = 0; i < n; i++)
 
 int dem(int mt[max][max], int n)
 {
-
+int k = 0;
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = 0; j < n; j++)
+		{
+			if (mt[i][j] != 0)
+				k++;
+		}
+	}
+	return k;
 }
 
 void KTVT(int mt[max][max], int n)
 {
-
+	cout << "co " << dem(mt, n) << " vi tri co the thay the duoc" << endl;
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = 0; j < n; j++)
+		{
+			if (mt[i][j] != 0)
+			{
+				cout << "mt[" << i << "]""[" << j << "]=" << mt[i][j] << endl;
+			}
+		}
+	}
 }
 
 void KTVT1(int mt[max][max], int n)
