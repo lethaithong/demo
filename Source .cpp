@@ -121,7 +121,31 @@ void KTVT(int mt[max][max], int n)
 
 void KTVT1(int mt[max][max], int n)
 {
+	srand((int)time(0));
+		int x = 1 + rand() % dem(mt, n);
+		cout << "tien hanh thay " << x << " vi tri:" << endl;
 
+		if (dem(mt, n) == 0) {
+			cout << "khong co phan tu nao de thay";
+		}
+			int dem = 0;
+			for (int i = 0; i < n; i++)
+			{
+				for (int j = 0; j < n; j++)
+				{
+					while (dem < x)
+					{
+						if (mt[i = rand() % n][j = rand() % n] != 0)
+						{
+							cout << "mt[" << i << "]""[" << j << "]=" << mt[i][j] << endl;
+							mt[i][j] = 0;
+							dem++;
+						}
+					}
+				}
+			}
+			xuatMang(mt, n);
+			ktlt(mt, n);
 }
 
 
