@@ -33,7 +33,32 @@ int main()
 
 void nhapMang(int mt[max][max], int &n)
 {
+	srand((int)time(0));
 
+	cout << "Nhap so bac ma tran vuong : ";
+	cin >> n;
+
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = 0; j < n; j++)
+		{
+			if (i == j)
+				mt[i][j] = 0;
+			else if (mt[i][j] == mt[j][i])
+				mt[i][j] = mt[j][i] = rand() % 3;
+		}
+	}
+	srand((int)time(0));
+	int k = rand() % n;
+	w = k;
+	cout << "\nk=" << k << endl;
+
+	for (int i = 0; i < n; i++)
+		for (int j = 0; j < n; j++)
+		{
+			mt[i][k] = 0;
+			mt[k][j] = 0;
+		}
 }
 
 void xuatMang(int mt[max][max], int n)
