@@ -43,7 +43,19 @@ void xuatMang(int mt[max][max], int n)
 
 void ktlt(int mt[max][max], int n)
 {
-
+for (int i = 0; i < n; i++)
+	{
+		for (int j = 0; j < n; j++)
+		{
+			if (mt[i][w] == 0 && mt[w][j] == 0) {
+				cout << "ma tran van lien thong";
+				return;
+			}
+			else
+				cout << "ma tran khong lien thong";
+			return;
+		}
+	}
 }
 
 int dem(int mt[max][max], int n)
