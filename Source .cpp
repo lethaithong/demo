@@ -63,7 +63,14 @@ void nhapMang(int mt[max][max], int &n)
 
 void xuatMang(int mt[max][max], int n)
 {
-
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = 0; j < n; j++)
+		{
+			cout << mt[i][j] << "\t";
+		}
+		cout << endl;
+	}
 }
 
 void ktlt(int mt[max][max], int n)
